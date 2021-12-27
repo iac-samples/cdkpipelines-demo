@@ -28,6 +28,14 @@ export class CdkpipelinesDemoStack extends Stack {
       handler,
     });
 
+    const deployment = new apigw.Deployment(this, 'Deployment', {
+      api: gw,
+    });
+    const stage = new apigw.Stage(this, 'Dev', {
+      deployment,
+      stageName: 'dev',
+    });
+
     this.urlOutput = new CfnOutput(this, 'Url', {
       value: gw.url,
     });
