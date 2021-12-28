@@ -2,6 +2,7 @@ import * as apigw from '@aws-cdk/aws-apigateway';
 import * as lambda from '@aws-cdk/aws-lambda';
 import { CfnOutput, Construct, Stack, StackProps } from '@aws-cdk/core';
 import * as path from 'path';
+import { ServicePrincipal } from '@aws-cdk/aws-iam';
 
 /**
  * A stack for our simple Lambda-powered web service
@@ -21,6 +22,8 @@ export class CdkpipelinesDemoStack extends Stack {
       handler: 'handler.handler',
       code: lambda.Code.fromAsset(path.resolve(__dirname, 'lambda')),
     });
+
+    handler.grantInvoke(new ServicePrincipal('apigateway.amazonaws.com'));
 
     // An API Gateway to make the Lambda web-accessible
     const gw = new apigw.LambdaRestApi(this, 'Gateway', {
