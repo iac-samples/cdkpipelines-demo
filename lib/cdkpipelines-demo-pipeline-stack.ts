@@ -19,7 +19,7 @@ export class CdkpipelinesDemoPipelineStack extends Stack {
        // How it will be built and synthesized
        synth: new ShellStep('Synth', {
          // Where the source can be found
-         input: CodePipelineSource.gitHub('gnudeep/cdk-pipeline-demo', 'master'),
+         input: CodePipelineSource.gitHub('iac-samples/cdkpipelines-demo', 'main'),
          
          // Install dependencies, build and run cdk synth
          commands: [
