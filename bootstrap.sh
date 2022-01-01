@@ -1,5 +1,4 @@
-
-
+#!/bin/bash
 npx cdk bootstrap \
   --profile default \
   --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess \
