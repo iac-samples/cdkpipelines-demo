@@ -9,8 +9,7 @@ https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws
 Intall nodes modules as explained in the AWS blog.
 
 ### Install dependencies for the CDK application
-```npm install @aws-cdk/aws-apigateway @aws-cdk/aws-lambda \
-  @types/aws-lambda```
+```npm install @aws-cdk/aws-apigateway @aws-cdk/aws-lambda @types/aws-lambda```
 
 ### Install CDK pipelines
 ```npm install @aws-cdk/pipelines```
