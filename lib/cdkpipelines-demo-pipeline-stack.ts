@@ -2,6 +2,9 @@ import { Construct, SecretValue, Stack, StackProps } from '@aws-cdk/core';
 import { CodePipeline, CodePipelineSource, ShellStep } from "@aws-cdk/pipelines";
 import { CdkpipelinesDemoStage } from './cdkpipelines-demo-stage';
 
+const defaultAccount = process.env.CDK_DEFAULT_ACCOUNT;
+const defaultRegion = process.env.CDK_DEFAULT_REGION;
+
 /**
  * The stack that defines the application pipeline
  */
@@ -30,7 +33,7 @@ export class CdkpipelinesDemoPipelineStack extends Stack {
     // This is where we add the application stages
     // ...
     pipeline.addStage(new CdkpipelinesDemoStage(this, 'PreProd', {
-        env: { account: '083793351300', region: 'us-east-2' }
+        env: { account: defaultAccount, region: defaultRegion }
       }));
       
   }
