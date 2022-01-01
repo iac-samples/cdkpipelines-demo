@@ -23,10 +23,10 @@ Class **CdkpipelinesDemoPipelineStack**
 ##### Create a PAT and store it as explained in the AWS blog.
 
 ##### Export required environment variables as explained in the AWS blog.
-Example:
 
-```CDK_DEFAULT_ACCOUNT=123456789012
-CDK_DEFAULT_REGION=us-east-1```
+Example:
+```CDK_DEFAULT_ACCOUNT=123456789012```
+```CDK_DEFAULT_REGION=us-east-1```
 
 ### Deploy the bootstrap stack using bootstrap.sh
 
