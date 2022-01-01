@@ -8,25 +8,39 @@ https://aws.amazon.com/blogs/developer/cdk-pipelines-continuous-delivery-for-aws
 
 Intall nodes modules as explained in the AWS blog.
 
-### Install dependencies for the CDK application
+##### Install dependencies for the CDK application
+
 ```npm install @aws-cdk/aws-apigateway @aws-cdk/aws-lambda @types/aws-lambda```
 
-### Install CDK pipelines
+##### Install CDK pipelines
+
 ```npm install @aws-cdk/pipelines```
 
-### Commit this code repo to GitHub and refer it in the code.
+##### Commit this code repo to GitHub and refer it in the code.
+
 Class **CdkpipelinesDemoPipelineStack**
 
-### Create a PAT and store it as explained in the AWS blog.
+##### Create a PAT and store it as explained in the AWS blog.
+
+##### Export required environment variables as explained in the AWS blog.
+Example:
+
+```CDK_DEFAULT_ACCOUNT=123456789012
+CDK_DEFAULT_REGION=us-east-1```
 
 ### Deploy the bootstrap stack using bootstrap.sh
+
 ```./bootstrap.sh```
 
 ### Deploy the pipeline using deploy-pipeline.sh
+
 ```./deploy-pipeline.sh```
 
 ### You can delete the pipeline uising undeploy-pipeline.sh
+
 ```./undeploy-pipeline.sh```
+
+---
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
