@@ -26,17 +26,18 @@ Class **CdkpipelinesDemoPipelineStack**
 
 Example:
 ```CDK_DEFAULT_ACCOUNT=123456789012```
+
 ```CDK_DEFAULT_REGION=us-east-1```
 
-### Deploy the bootstrap stack using bootstrap.sh
+##### Deploy the bootstrap stack using bootstrap.sh
 
 ```./bootstrap.sh```
 
-### Deploy the pipeline using deploy-pipeline.sh
+##### Deploy the pipeline using deploy-pipeline.sh
 
 ```./deploy-pipeline.sh```
 
-### You can delete the pipeline uising undeploy-pipeline.sh
+##### You can delete the pipeline uising undeploy-pipeline.sh
 
 ```./undeploy-pipeline.sh```
 
